@@ -198,33 +198,25 @@ def start():
 
 start()
 
-locked_out = "The guard looks down at you and laughs. You can't get in to see king so you find a place to rest for the night. Madea's henchmen murder you in the night"
 no_sword = "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself, but withot your family's sword the king doesn't recognize you. You wander back to your table defeated and have your last drink of wine."
-two = "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself, but the king doesn't beleive you. 'You lie. You\'re naught but a mercenary sent to kill me. Guards! Off with his head!' Well, shit."
-three = "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself. Seeing your sword and recognizing you as his son king Aegeus slaps the poisoned cup from your hand. The sorceress looses her shit and kills you and everyone in the kingdom."
-four = "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself. Seeing your sword and recognizing you as his son king Aegeus slaps the poisoned cup from your hand. You and the king join together to battle sorceress but your injuries make it easy for her to trap in vial hanging from her neck where she was able to siphon off your life force to take over the kingdom as you watched nestled in her evil cleavage."
-five = "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself. Seeing your sword and recognizing you as his son king Aegeus slaps the poisoned cup from your hand. You stand beside your father to battle the sorceress.  She tosses you aside and goes for the king.  Too injured from all you battles you cannot save your father. The evil bitch laughs at your loss as you drive your father's sword through her black heart.  With no ties to the throne any longer, you leave defeated, but still standing."
-six = "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself. Seeing your sword and recognizing you as his son king Aegeus slaps the poisoned cup from your hand. You stand in front of your father, eager to end this bitch's life. You leap across the room as if in slow motion, and watch your blade slice through her neck, barely noticing her's slicing through your leg. The kingdom saved, you limp about the palace living out your days in quiet luxury."
-seven = "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. Just before Theseus took a sip of the poisoned wine the king recognized his sword he left under a rock in the small town of Troezen and slapped the cup away. 'Guards! Arrest that bitch! She tried to murder the future king!' The two realized that as father and son they had a lot to catch up on and went on to fight many battles and live many adventures."
+
+response = [
+    "",
+    "The guard looks down at you and laughs. You can't get in to see king so you find a place to rest for the night. Madea's henchmen murder you in the night",
+    "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself, but the king doesn't beleive you. 'You lie. You\'re naught but a mercenary sent to kill me. Guards! Off with his head!' Well, shit.",
+    "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself. Seeing your sword and recognizing you as his son king Aegeus slaps the poisoned cup from your hand. The sorceress looses her shit and kills you and everyone in the kingdom.",
+    "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself. Seeing your sword and recognizing you as his son king Aegeus slaps the poisoned cup from your hand. You and the king join together to battle sorceress but your injuries make it easy for her to trap in vial hanging from her neck where she was able to siphon off your life force to take over the kingdom as you watched nestled in her evil cleavage.",
+    "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself. Seeing your sword and recognizing you as his son king Aegeus slaps the poisoned cup from your hand. You stand beside your father to battle the sorceress.  She tosses you aside and goes for the king.  Too injured from all you battles you cannot save your father. The evil bitch laughs at your loss as you drive your father's sword through her black heart.  With no ties to the throne any longer, you leave defeated, but still standing.",
+    "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself. Seeing your sword and recognizing you as his son king Aegeus slaps the poisoned cup from your hand. You stand in front of your father, eager to end this bitch's life. You leap across the room as if in slow motion, and watch your blade slice through her neck, barely noticing her's slicing through your leg. The kingdom saved, you limp about the palace living out your days in quiet luxury.",
+    "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. Just before Theseus took a sip of the poisoned wine the king recognized his sword he left under a rock in the small town of Troezen and slapped the cup away. 'Guards! Arrest that bitch! She tried to murder the future king!' The two realized that as father and son they had a lot to catch up on and went on to fight many battles and live many adventures."
+]
 
 if sword == True:
     print no_sword
-elif points == 0:
-    print
-elif points == 1:
-    print locked_out
-elif points == 2:
-    print two
-elif points == 3:
-    print three
-elif points == 4:
-    print four
-elif points == 5:
-    print five
-elif points == 6:
-    print six
+elif points < 7:
+    print response[points]
 elif points >= 7:
-    print seven
+    print response[7]
 else:
     print "something broke"
 
