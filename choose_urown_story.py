@@ -201,7 +201,6 @@ start()
 no_sword = "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself, but withot your family's sword the king doesn't recognize you. You wander back to your table defeated and have your last drink of wine."
 
 response = [
-    "",
     "The guard looks down at you and laughs. You can't get in to see king so you find a place to rest for the night. Madea's henchmen murder you in the night",
     "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself, but the king doesn't beleive you. 'You lie. You\'re naught but a mercenary sent to kill me. Guards! Off with his head!' Well, shit.",
     "The guard looks down from his post and says 'The celebration is open to all, but I doubt the king will see you.' You get in the dining hall and make your way to the kings table. You announce yourself. Seeing your sword and recognizing you as his son king Aegeus slaps the poisoned cup from your hand. The sorceress looses her shit and kills you and everyone in the kingdom.",
@@ -213,10 +212,8 @@ response = [
 
 if sword == True:
     print no_sword
-elif points < 7:
-    print response[points]
-elif points >= 7:
-    print response[7]
+elif points >= 1:
+    print response[min(points, len(response)) - 1]
 else:
     print "something broke"
 
